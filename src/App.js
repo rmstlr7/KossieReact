@@ -4,7 +4,7 @@ function App() {
   const [number, setNumber] = useState(1);
   const double = () => {
     setNumber((prevState) => prevState * 2);
-    setNumber((prevState) => prevState * 2);
+    setNumber((prevState) => prevState * 2); 
   };
 
   return (
