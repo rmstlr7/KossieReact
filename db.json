@@ -1,0 +1,14 @@
+{
+  "posts": [
+    {
+      "title": "22",
+      "body": "33",
+      "id": 1
+    },
+    {
+      "title": "ggg",
+      "body": "qqq",
+      "id": 2
+    }
+  ]
+}
