@@ -1,41 +1,39 @@
-import { useState } from 'react';
-import axios from 'axios';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
+import BlogForm from './components/BlogForm';
 
 function App() {
-  const [title, setTitle] = useState('');
-  const [body, setBody] = useState('');
-
-  const onSubmit = () => {
-    axios.post('http://localhost:3000/posts', {
-      title,
-      body
-    })
-  }
 
   return(
-    <div className="container">
-      <div className="mb-3">
-        <label className="form-label">title</label>
-        <input 
-          className="form-control" 
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-        <label className="form-label">body</label>
-        <textarea 
-          className="form-control"
-          rows="20"
-          value={body}
-          onChange={(e) => setBody(e.target.value)}
-        />
-      </div>
-      <button 
-        className="btn btn-primary"
-        onClick={onSubmit}>
-        Post
-      </button>
-
-    </div>
+    <Router>
+      <nav className="navbar navbar-dark bg-dark">
+        <div className="container">
+          <Link className="navbar-brand" to="/">Home</Link>
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link className="nav-link active" to="/blogs">
+                Blogs
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    
+      <Switch>
+        <div className="container">
+          <Route path="/" exact>
+            Home page
+          </Route>
+          <Route path="/blogs">
+            <BlogForm />
+          </Route>
+        </div>
+      </Switch>
+    </Router>
   )
 }
 export default App;
