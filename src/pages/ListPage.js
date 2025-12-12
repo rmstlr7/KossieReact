@@ -14,12 +14,16 @@ const ListPage = () => {
         getPosts();
     }, []);
 
-    //getPosts();
-
     return(
-        <div>{posts.map((data) => {
-            return <div>{data.title}</div>
-        })}</div>
+
+        <div>
+            <h1>Blogs</h1>
+            {posts.map((post) => {
+                return (
+                    <div key={post.id}>{post.title}</div>
+                )
+            })}
+        </div>
     );
 }
 export default ListPage;
