@@ -21,7 +21,11 @@ const ListPage = () => {
             <h1>Blogs</h1>
             {posts.map((post) => {
                 return (
-                    <Card key={post.id}  title={post.title} />
+                    <Card key={post.id}  title={post.title} >
+                        <div>
+                            button
+                        </div>
+                    </Card>
                 )
             })}
         </div>
