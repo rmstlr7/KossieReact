@@ -1,39 +1,14 @@
 {
   "posts": [
     {
-      "title": "22",
-      "body": "33",
+      "title": "test1",
+      "body": "test1 contants",
       "id": 1
     },
     {
-      "title": "ggg",
-      "body": "qqq",
+      "title": "test2",
+      "body": "test2 contants",
       "id": 2
-    },
-    {
-      "title": "11",
-      "body": "22",
-      "id": 3
-    },
-    {
-      "title": "tee",
-      "body": "eqq",
-      "id": 4
-    },
-    {
-      "title": "test22",
-      "body": "test33",
-      "id": 5
-    },
-    {
-      "title": "test222",
-      "body": "test331",
-      "id": 6
-    },
-    {
-      "title": "qqq",
-      "body": "eee",
-      "id": 7
     }
   ]
 }
