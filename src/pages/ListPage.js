@@ -37,7 +37,17 @@ const ListPage = () => {
                         key={post.id}  
                         title={post.title} 
                         onClick={ () => history.push('/blogs/edit') } 
-                    />
+                    >
+                    <div>
+                        <button 
+                            className="btn btn-danger btn-sm"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                console.log('delete Click')
+                            }}
+                        >Delete</button>
+                    </div>
+                    </Card>
                 )
             })}
         </div>
