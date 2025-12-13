@@ -1,8 +1,12 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import Card from '../components/Card.js';
+import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+
 const ListPage = () => {
 
+    const history = useHistory();
     const [posts, setPosts] = useState([]);
 
     const getPosts = () => {
@@ -18,12 +22,22 @@ const ListPage = () => {
     return(
 
         <div>
-            <h1>Blogs</h1>
+            <div className="d-flex justify-content-between">
+                <h1>Blogs</h1>
+                <div>
+                    <Link to="/blogs/create" className="btn btn-success">
+                        Create new
+                    </Link>
+                </div>
+            </div>
+
             {posts.map((post) => {
                 return (
-                    <Card key={post.id}  title={post.title} >
-                        <div>button</div>
-                    </Card>
+                    <Card
+                        key={post.id}  
+                        title={post.title} 
+                        onClick={ () => history.push('/blogs/edit') } 
+                    />
                 )
             })}
         </div>
