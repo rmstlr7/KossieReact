@@ -1,14 +1,3 @@
 {
-  "posts": [
-    {
-      "title": "test1",
-      "body": "test1 contants",
-      "id": 1
-    },
-    {
-      "title": "test2",
-      "body": "test2 contants",
-      "id": 2
-    }
-  ]
+  "posts": []
 }
